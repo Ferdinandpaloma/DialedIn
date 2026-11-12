@@ -1,0 +1,584 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0212AA212638C0E4961F9946 /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7148EF87A98A91807105DDE /* ButtonStyles.swift */; };
+		056B8D4D2111E9F9B56FF0DA /* DebugMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE924E6C80E8216654F68E4D /* DebugMenuView.swift */; };
+		09AA7DD9AE6D01B5E707859E /* DialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EB9E91E48381CD3E0AE3EE /* DialView.swift */; };
+		2660D8DE8EBD3AE3E86A153C /* PairingFlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE53444F75AEC9C78A105F3D /* PairingFlowView.swift */; };
+		43DF408B0A6E3B612922F34A /* SessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923BD53CBC3EE547820C0294 /* SessionView.swift */; };
+		49D2CD8870091D2085A04C7B /* ONDOApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D118E25E72EDA9CC8B02D82D /* ONDOApp.swift */; };
+		5046EFAE59CBB3F060BBF229 /* ShowerControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A04B4D6F00DDBC0F346A087 /* ShowerControllerTests.swift */; };
+		51FE9057BF43E019A294E7B9 /* ShowerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC60FCB47CD80ED27E7A3C3 /* ShowerController.swift */; };
+		5EE2524530169350B2ECAC10 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FC52707BE960F26C3151D8 /* MockData.swift */; };
+		70987C2F6B18B60FB29E5453 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4573893150B63BAA997955F4 /* WelcomeView.swift */; };
+		782CF8255E7E949DA07B6A13 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52695AE4CB2C040D992C6D97 /* HomeView.swift */; };
+		8D4905CF6EF7B3EA352BCD78 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1959EE4BA579F12F8DFC98 /* Theme.swift */; };
+		9476A34FF3084751560EF00E /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16A23DE018699B527D5A48C /* Models.swift */; };
+		9DDAC0A473D82F8AC11F2C47 /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5675D2237E577B445D020BDE /* Components.swift */; };
+		A88C6D2937C636DCAF955145 /* LaunchOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7DB4C5F7D5EC59C1AA83945 /* LaunchOptions.swift */; };
+		AA8E0076D78AFBDA9ABF59EA /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA576B0CEF7C7D70DAAB98C /* HistoryView.swift */; };
+		B201DE1296B63EA41DEA61CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AABAA22582E8533837AA4155 /* Assets.xcassets */; };
+		CA308BF5DA5656FFDFD6AFF5 /* PresetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57B11637383BCFA926566DE /* PresetsView.swift */; };
+		E0A7437BA9C089180150B426 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFC4C357D91A1522C4DE01D /* SettingsView.swift */; };
+		E4675A97C301B7EA1BCAED64 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7480C70F152C21C23E134BCA /* RootView.swift */; };
+		F5D2CD88D81694FD8FE64188 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F5A2B00B9B65924A395C3F /* MainTabView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		07558AD8DD7C5FFBD0A4AC68 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07774832680198DB2ADBBE03 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD2017635EE284488245F466;
+			remoteInfo = ONDO;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		292CE7F56F85A3CEE86006CC /* ONDOTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = ONDOTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DA576B0CEF7C7D70DAAB98C /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		43F5A2B00B9B65924A395C3F /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		4573893150B63BAA997955F4 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		4C1959EE4BA579F12F8DFC98 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		52695AE4CB2C040D992C6D97 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		5675D2237E577B445D020BDE /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
+		7480C70F152C21C23E134BCA /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		7A04B4D6F00DDBC0F346A087 /* ShowerControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowerControllerTests.swift; sourceTree = "<group>"; };
+		923BD53CBC3EE547820C0294 /* SessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionView.swift; sourceTree = "<group>"; };
+		9FFC4C357D91A1522C4DE01D /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		A8C3D408D231D96C977DBDA3 /* ONDO.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = ONDO.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AABAA22582E8533837AA4155 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B16A23DE018699B527D5A48C /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		BE924E6C80E8216654F68E4D /* DebugMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugMenuView.swift; sourceTree = "<group>"; };
+		D0FC52707BE960F26C3151D8 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		D118E25E72EDA9CC8B02D82D /* ONDOApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ONDOApp.swift; sourceTree = "<group>"; };
+		D57B11637383BCFA926566DE /* PresetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetsView.swift; sourceTree = "<group>"; };
+		E7148EF87A98A91807105DDE /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
+		EE53444F75AEC9C78A105F3D /* PairingFlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairingFlowView.swift; sourceTree = "<group>"; };
+		F5EB9E91E48381CD3E0AE3EE /* DialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialView.swift; sourceTree = "<group>"; };
+		F7DB4C5F7D5EC59C1AA83945 /* LaunchOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchOptions.swift; sourceTree = "<group>"; };
+		FFC60FCB47CD80ED27E7A3C3 /* ShowerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowerController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		043475BB55D996E51033EA6B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D0FC52707BE960F26C3151D8 /* MockData.swift */,
+				B16A23DE018699B527D5A48C /* Models.swift */,
+				FFC60FCB47CD80ED27E7A3C3 /* ShowerController.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0EE71CC087822D9BF115A6AE /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				E7148EF87A98A91807105DDE /* ButtonStyles.swift */,
+				4C1959EE4BA579F12F8DFC98 /* Theme.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		1EFC42864A21695A876AA627 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F7DB4C5F7D5EC59C1AA83945 /* LaunchOptions.swift */,
+				D118E25E72EDA9CC8B02D82D /* ONDOApp.swift */,
+				7480C70F152C21C23E134BCA /* RootView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		5A52C696EA66356EA50FB412 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				EE53444F75AEC9C78A105F3D /* PairingFlowView.swift */,
+				4573893150B63BAA997955F4 /* WelcomeView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		5E34203007F514F7FAD3026E /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				923BD53CBC3EE547820C0294 /* SessionView.swift */,
+			);
+			path = Session;
+			sourceTree = "<group>";
+		};
+		7C4BFC571480EE46E82A8D4F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				52695AE4CB2C040D992C6D97 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		7F18583FED4F7543E1518C63 /* Presets */ = {
+			isa = PBXGroup;
+			children = (
+				D57B11637383BCFA926566DE /* PresetsView.swift */,
+			);
+			path = Presets;
+			sourceTree = "<group>";
+		};
+		88BA3B303EFB5CBB9E3D5846 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				7A04B4D6F00DDBC0F346A087 /* ShowerControllerTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		9C372E7372A229AEDAE1FDC4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AABAA22582E8533837AA4155 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A8A0676BF6EAF968D0917F10 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A8C3D408D231D96C977DBDA3 /* ONDO.app */,
+				292CE7F56F85A3CEE86006CC /* ONDOTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CFE8D882AA3A340127B22BEB /* History */ = {
+			isa = PBXGroup;
+			children = (
+				2DA576B0CEF7C7D70DAAB98C /* HistoryView.swift */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		D518D8290AE214FDFA209713 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BE924E6C80E8216654F68E4D /* DebugMenuView.swift */,
+				43F5A2B00B9B65924A395C3F /* MainTabView.swift */,
+				CFE8D882AA3A340127B22BEB /* History */,
+				7C4BFC571480EE46E82A8D4F /* Home */,
+				5A52C696EA66356EA50FB412 /* Onboarding */,
+				7F18583FED4F7543E1518C63 /* Presets */,
+				5E34203007F514F7FAD3026E /* Session */,
+				FBC1084B3B1B487D004FFDBB /* Settings */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E1D5D5CFBB41828B3533CED8 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				5675D2237E577B445D020BDE /* Components.swift */,
+				F5EB9E91E48381CD3E0AE3EE /* DialView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		EB7EA7B24BFC85C61CC09D9A = {
+			isa = PBXGroup;
+			children = (
+				1EFC42864A21695A876AA627 /* App */,
+				E1D5D5CFBB41828B3533CED8 /* Components */,
+				043475BB55D996E51033EA6B /* Models */,
+				9C372E7372A229AEDAE1FDC4 /* Resources */,
+				88BA3B303EFB5CBB9E3D5846 /* Tests */,
+				0EE71CC087822D9BF115A6AE /* Theme */,
+				D518D8290AE214FDFA209713 /* Views */,
+				A8A0676BF6EAF968D0917F10 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FBC1084B3B1B487D004FFDBB /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				9FFC4C357D91A1522C4DE01D /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D1070AE447659C59947BBE1B /* ONDOTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5DB074F3DECE28E9E4744956 /* Build configuration list for PBXNativeTarget "ONDOTests" */;
+			buildPhases = (
+				2EAFCFD45E78CEA9BD100701 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9B1F18ED866FA78E53D7A24C /* PBXTargetDependency */,
+			);
+			name = ONDOTests;
+			packageProductDependencies = (
+			);
+			productName = ONDOTests;
+			productReference = 292CE7F56F85A3CEE86006CC /* ONDOTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FD2017635EE284488245F466 /* ONDO */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 35D4D97A81F667D33762A44C /* Build configuration list for PBXNativeTarget "ONDO" */;
+			buildPhases = (
+				D9435AD47E9F682F47FC4B10 /* Sources */,
+				4739DC12500380D962464131 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ONDO;
+			packageProductDependencies = (
+			);
+			productName = ONDO;
+			productReference = A8C3D408D231D96C977DBDA3 /* ONDO.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		07774832680198DB2ADBBE03 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					D1070AE447659C59947BBE1B = {
+						ProvisioningStyle = Automatic;
+					};
+					FD2017635EE284488245F466 = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = F30125F7289977362482D213 /* Build configuration list for PBXProject "ONDO" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = EB7EA7B24BFC85C61CC09D9A;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = A8A0676BF6EAF968D0917F10 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FD2017635EE284488245F466 /* ONDO */,
+				D1070AE447659C59947BBE1B /* ONDOTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4739DC12500380D962464131 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B201DE1296B63EA41DEA61CA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2EAFCFD45E78CEA9BD100701 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5046EFAE59CBB3F060BBF229 /* ShowerControllerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9435AD47E9F682F47FC4B10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0212AA212638C0E4961F9946 /* ButtonStyles.swift in Sources */,
+				9DDAC0A473D82F8AC11F2C47 /* Components.swift in Sources */,
+				056B8D4D2111E9F9B56FF0DA /* DebugMenuView.swift in Sources */,
+				09AA7DD9AE6D01B5E707859E /* DialView.swift in Sources */,
+				AA8E0076D78AFBDA9ABF59EA /* HistoryView.swift in Sources */,
+				782CF8255E7E949DA07B6A13 /* HomeView.swift in Sources */,
+				A88C6D2937C636DCAF955145 /* LaunchOptions.swift in Sources */,
+				F5D2CD88D81694FD8FE64188 /* MainTabView.swift in Sources */,
+				5EE2524530169350B2ECAC10 /* MockData.swift in Sources */,
+				9476A34FF3084751560EF00E /* Models.swift in Sources */,
+				49D2CD8870091D2085A04C7B /* ONDOApp.swift in Sources */,
+				2660D8DE8EBD3AE3E86A153C /* PairingFlowView.swift in Sources */,
+				CA308BF5DA5656FFDFD6AFF5 /* PresetsView.swift in Sources */,
+				E4675A97C301B7EA1BCAED64 /* RootView.swift in Sources */,
+				43DF408B0A6E3B612922F34A /* SessionView.swift in Sources */,
+				E0A7437BA9C089180150B426 /* SettingsView.swift in Sources */,
+				51FE9057BF43E019A294E7B9 /* ShowerController.swift in Sources */,
+				8D4905CF6EF7B3EA352BCD78 /* Theme.swift in Sources */,
+				70987C2F6B18B60FB29E5453 /* WelcomeView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9B1F18ED866FA78E53D7A24C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD2017635EE284488245F466 /* ONDO */;
+			targetProxy = 07558AD8DD7C5FFBD0A4AC68 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		126BAF1B559FD0EC6C52490F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = ONDO;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ondo.mock;
+				PRODUCT_NAME = ONDO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		4C601DC5A851FB1D66F7BD44 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		6AD457BDC5706D483EBF345E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = ONDO;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ondo.mock;
+				PRODUCT_NAME = ONDO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		6B40323B8A8EEF9059CA0A40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		B5E34BEE79E3C7E735F3C1FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ondo.mock.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ONDO.app/ONDO";
+			};
+			name = Release;
+		};
+		D0709444677B21294D22E1E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ondo.mock.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ONDO.app/ONDO";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		35D4D97A81F667D33762A44C /* Build configuration list for PBXNativeTarget "ONDO" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6AD457BDC5706D483EBF345E /* Debug */,
+				126BAF1B559FD0EC6C52490F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		5DB074F3DECE28E9E4744956 /* Build configuration list for PBXNativeTarget "ONDOTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0709444677B21294D22E1E8 /* Debug */,
+				B5E34BEE79E3C7E735F3C1FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F30125F7289977362482D213 /* Build configuration list for PBXProject "ONDO" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C601DC5A851FB1D66F7BD44 /* Debug */,
+				6B40323B8A8EEF9059CA0A40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 07774832680198DB2ADBBE03 /* Project object */;
+}
