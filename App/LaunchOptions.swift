@@ -7,13 +7,15 @@ enum DemoScreen: String {
     case welcome, install, searching, valve, calibrate
     case home, setpoint, warming, ready, flush
     case presets, history, settings
+    /// Live, unattended run for screen recordings: warm-up → ready → toilet flush → recovery.
+    case tour
 
     var isOnboarding: Bool {
         [.welcome, .install, .searching, .valve, .calibrate].contains(self)
     }
 
     var opensSession: Bool {
-        [.setpoint, .warming, .ready, .flush].contains(self)
+        [.setpoint, .warming, .ready, .flush, .tour].contains(self)
     }
 
     var tab: AppTab {
@@ -56,6 +58,14 @@ enum LaunchOptions {
         case .ready:
             controller.start()
             controller.advance(by: 6.0)   // reaches READY live about a second later, so the banner fires
+        case .tour:
+            controller.demoMode = false
+            Task {
+                try? await Task.sleep(for: .seconds(2))
+                controller.start()
+                try? await Task.sleep(for: .seconds(14))
+                controller.simulateFlush()
+            }
         case .flush:
             controller.demoMode = false
             controller.start()

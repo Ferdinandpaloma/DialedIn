@@ -391,9 +391,16 @@ private struct DeviceRow: View {
             .accessibilityHidden(true)
 
             VStack(alignment: .leading, spacing: 6) {
-                Text(device.displayName)
-                    .font(.title3.weight(.semibold))
-                    .foregroundStyle(Theme.ink)
+                VStack(alignment: .leading, spacing: 0) {
+                    Text(device.name)
+                        .font(.title3.weight(.semibold))
+                        .foregroundStyle(Theme.ink)
+                    Text(device.location)
+                        .font(.body)
+                        .foregroundStyle(Theme.secondaryInk)
+                }
+                .accessibilityElement(children: .ignore)
+                .accessibilityLabel(device.displayName)
                 HStack(spacing: 8) {
                     SignalBars(level: device.signal.bars)
                     Text("Signal \(device.signal.rawValue.lowercased())")
