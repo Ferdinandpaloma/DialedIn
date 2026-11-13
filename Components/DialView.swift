@@ -15,8 +15,6 @@ struct DialView: View {
     static let sweep = 270.0
     static let startAngle = 135.0
 
-    @State private var glowPulse = false
-
     private var isRunning: Bool { status.isRunning }
     private var isReady: Bool { status == .ready }
 
@@ -40,7 +38,6 @@ struct DialView: View {
         .accessibilityElement(children: .ignore)
         .accessibilityLabel("Shower dial")
         .accessibilityValue(accessibilityValue)
-        .onAppear { glowPulse = true }
     }
 
     private var accessibilityValue: String {
@@ -68,47 +65,35 @@ struct DialView: View {
 
     // MARK: Layers
 
+    /// Satin (not mirror) metal: a narrow tonal range so the ring doesn't glare.
     private static let metalColors: [Color] = [
-        Color(white: 0.94), Color(white: 0.62), Color(white: 0.97), Color(white: 0.55),
-        Color(white: 0.92), Color(white: 0.66), Color(white: 0.94),
+        Color(white: 0.90), Color(white: 0.78), Color(white: 0.92), Color(white: 0.76),
+        Color(white: 0.89), Color(white: 0.80), Color(white: 0.90),
     ]
 
     private func metalRing(_ s: CGFloat) -> some View {
-        let shadowColor: Color
-        let shadowRadius: CGFloat
-        let shadowY: CGFloat
-        if isReady {
-            shadowColor = Theme.green.opacity(glowPulse ? 0.85 : 0.5)
-            shadowRadius = s * (glowPulse ? 0.09 : 0.06)
-            shadowY = 0
-        } else {
-            shadowColor = Color.black.opacity(0.3)
-            shadowRadius = s * 0.03
-            shadowY = s * 0.015
-        }
-        let pulse: Animation = isReady
-            ? .easeInOut(duration: 1.4).repeatForever(autoreverses: true)
-            : .default
-        let vignette = RadialGradient(colors: [Color.clear, Color.black.opacity(0.22)],
-                                      center: .center, startRadius: s * 0.38, endRadius: s * 0.5)
+        let shadowColor: Color = isReady ? Theme.green.opacity(0.35) : Theme.navy.opacity(0.12)
+        let shadowRadius: CGFloat = isReady ? s * 0.06 : s * 0.04
+        let shadowY: CGFloat = isReady ? 0 : s * 0.015
+        let vignette = RadialGradient(colors: [Color.clear, Color.black.opacity(0.10)],
+                                      center: .center, startRadius: s * 0.40, endRadius: s * 0.5)
         return Circle()
             .fill(AngularGradient(colors: Self.metalColors, center: .center))
             .overlay(Circle().fill(vignette))
-            .overlay(Circle().strokeBorder(Color.black.opacity(0.25), lineWidth: 1))
+            .overlay(Circle().strokeBorder(Color.black.opacity(0.08), lineWidth: 1))
             .shadow(color: shadowColor, radius: shadowRadius, y: shadowY)
-            .animation(pulse, value: glowPulse)
-            .animation(.easeInOut(duration: 0.5), value: isReady)
+            .animation(.easeInOut(duration: 0.6), value: isReady)
     }
 
     private static let faceColors: [Color] = [Color(hex: 0x1F3D54), Color(hex: 0x0B1C29), Color(hex: 0x040B11)]
-    private static let glassColors: [Color] = [Color.white.opacity(0.13), Color.clear]
+    private static let glassColors: [Color] = [Color.white.opacity(0.07), Color.clear]
 
     private func face(_ s: CGFloat) -> some View {
         let fill = RadialGradient(colors: Self.faceColors, center: UnitPoint(x: 0.42, y: 0.3),
                                   startRadius: 0, endRadius: s * 0.48)
         let glass = LinearGradient(colors: Self.glassColors, startPoint: .top, endPoint: .bottom)
-        let rimColor: Color = isReady ? Theme.green : Color.black.opacity(0.6)
-        let rimWidth: CGFloat = isReady ? s * 0.014 : 2
+        let rimColor: Color = isReady ? Theme.green.opacity(0.85) : Color.black.opacity(0.4)
+        let rimWidth: CGFloat = isReady ? s * 0.009 : 1.5
         let highlight = Ellipse()
             .fill(glass)
             .frame(width: s * 0.66, height: s * 0.34)
@@ -137,7 +122,7 @@ struct DialView: View {
         return ZStack {
             Circle()
                 .trim(from: 0, to: 0.75)
-                .stroke(Color.white.opacity(0.13), style: StrokeStyle(lineWidth: width, lineCap: .round))
+                .stroke(Color.white.opacity(0.10), style: StrokeStyle(lineWidth: width, lineCap: .round))
             Circle()
                 .trim(from: 0, to: 0.75 * arcFraction)
                 .stroke(gradient, style: StrokeStyle(lineWidth: width, lineCap: .round))

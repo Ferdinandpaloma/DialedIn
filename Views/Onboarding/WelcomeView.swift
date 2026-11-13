@@ -35,7 +35,7 @@ struct WelcomeView: View {
 
                 VStack(spacing: 14) {
                     Text("The thermostat for your shower")
-                        .font(.largeTitle.weight(.bold))
+                        .font(.largeTitle.weight(.semibold))
                         .foregroundStyle(.white)
                     Text("Set your temperature once. ONDO warms the water, chimes when it’s ready, and never goes above your safety cap.")
                         .font(.title3)

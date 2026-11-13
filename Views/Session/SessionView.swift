@@ -53,7 +53,7 @@ struct SessionView: View {
             }
             .padding(20)
         }
-        .background(Color.white)
+        .background(Theme.background)
         .safeAreaInset(edge: .bottom) { actionButton }
         .navigationTitle(isRunning ? "Your shower" : "Set temperature")
         .navigationBarTitleDisplayMode(.inline)
@@ -78,7 +78,6 @@ struct SessionView: View {
         .padding(.horizontal, 18)
         .padding(.vertical, 12)
         .background(Capsule().fill(Theme.red.opacity(0.12)))
-        .overlay(Capsule().strokeBorder(Theme.red, lineWidth: 2))
         .accessibilityElement(children: .combine)
     }
 
@@ -91,7 +90,7 @@ struct SessionView: View {
                     .font(.body)
                     .foregroundStyle(Theme.secondaryInk)
                 Text(units.string(controller.setPoint))
-                    .font(.largeTitle.weight(.bold))
+                    .font(.largeTitle.weight(.semibold))
                     .foregroundStyle(Theme.ink)
                     .monospacedDigit()
                     .contentTransition(.numericText(value: Double(controller.setPoint)))
@@ -106,7 +105,7 @@ struct SessionView: View {
     private var warmUpCard: some View {
         VStack(alignment: .leading, spacing: 14) {
             Text("Warm up by")
-                .font(.title3.weight(.bold))
+                .font(.title3.weight(.semibold))
                 .accessibilityAddTraits(.isHeader)
             HStack(spacing: 10) {
                 ForEach(WarmUpMode.allCases) { mode in
@@ -119,9 +118,7 @@ struct SessionView: View {
                             .foregroundStyle(selected ? .white : Theme.navy)
                             .frame(maxWidth: .infinity, minHeight: 52)
                             .background(RoundedRectangle(cornerRadius: 14, style: .continuous)
-                                .fill(selected ? Theme.navy : .white))
-                            .overlay(RoundedRectangle(cornerRadius: 14, style: .continuous)
-                                .strokeBorder(Theme.hairline, lineWidth: selected ? 0 : 1.5))
+                                .fill(selected ? Theme.navy : Theme.background))
                     }
                     .buttonStyle(.plain)
                     .accessibilityAddTraits(selected ? .isSelected : [])
@@ -146,7 +143,7 @@ struct SessionView: View {
                     .foregroundStyle(Theme.secondaryInk)
                 Spacer()
                 Text(units.string(controller.waterTemp))
-                    .font(.title.weight(.bold))
+                    .font(.title.weight(.semibold))
                     .monospacedDigit()
                     .contentTransition(.numericText(value: controller.waterTemp))
                     .animation(.snappy, value: units.number(controller.waterTemp))
@@ -200,7 +197,7 @@ struct SessionView: View {
                 } label: {
                     Label("Stop", systemImage: "stop.fill")
                 }
-                .buttonStyle(.ondoPrimary(Theme.red))
+                .buttonStyle(.ondoStop)
                 .accessibilityLabel("Stop shower")
             } else if warmUpMode == .later {
                 Button {
@@ -222,7 +219,7 @@ struct SessionView: View {
         }
         .padding(.horizontal, 20)
         .padding(.vertical, 12)
-        .background(Color.white)
+        .background(Theme.background)
     }
 
     // MARK: Actions

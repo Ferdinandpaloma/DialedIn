@@ -17,7 +17,7 @@ struct SettingsView: View {
                                 .font(.title3.weight(.semibold))
                             Spacer()
                             Text(controller.units.string(controller.cap))
-                                .font(.title.weight(.bold))
+                                .font(.title.weight(.semibold))
                                 .foregroundStyle(Theme.red)
                         }
                         Slider(

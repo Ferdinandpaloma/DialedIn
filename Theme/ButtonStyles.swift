@@ -7,7 +7,7 @@ struct PrimaryButtonStyle: ButtonStyle {
 
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
-            .font(.title3.weight(.bold))
+            .font(.title3.weight(.semibold))
             .foregroundStyle(.white)
             .multilineTextAlignment(.center)
             .padding(.horizontal, 20)
@@ -38,12 +38,9 @@ struct SecondaryButtonStyle: ButtonStyle {
             .frame(maxWidth: .infinity, minHeight: 56)
             .background(
                 RoundedRectangle(cornerRadius: Theme.cornerRadius, style: .continuous)
-                    .fill(Theme.card)
+                    .fill(Theme.surface)
             )
-            .overlay(
-                RoundedRectangle(cornerRadius: Theme.cornerRadius, style: .continuous)
-                    .strokeBorder(Theme.hairline, lineWidth: 1.5)
-            )
+            .shadow(color: Theme.shadow, radius: 10, y: 3)
             .contentShape(RoundedRectangle(cornerRadius: Theme.cornerRadius, style: .continuous))
             .opacity(configuration.isPressed ? 0.7 : 1)
     }
@@ -63,6 +60,29 @@ struct PillButtonStyle: ButtonStyle {
             .contentShape(Capsule())
             .opacity(configuration.isPressed ? 0.8 : 1)
     }
+}
+
+/// Gentle tinted button (light color wash, deep-colored text). Used for Stop.
+struct SoftButtonStyle: ButtonStyle {
+    var tint: Color = Theme.red
+    var text: Color = Theme.redDeep
+
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .font(.title3.weight(.semibold))
+            .foregroundStyle(text)
+            .padding(.horizontal, 20)
+            .padding(.vertical, 12)
+            .frame(maxWidth: .infinity, minHeight: 60)
+            .background(RoundedRectangle(cornerRadius: Theme.cornerRadius, style: .continuous)
+                .fill(tint.opacity(0.13)))
+            .contentShape(RoundedRectangle(cornerRadius: Theme.cornerRadius, style: .continuous))
+            .opacity(configuration.isPressed ? 0.7 : 1)
+    }
+}
+
+extension ButtonStyle where Self == SoftButtonStyle {
+    static var ondoStop: SoftButtonStyle { SoftButtonStyle() }
 }
 
 extension ButtonStyle where Self == PrimaryButtonStyle {

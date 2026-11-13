@@ -77,10 +77,10 @@ struct PairingFlowView: View {
                     .disabled(!canContinue)
                     .padding(.horizontal, 24)
                     .padding(.vertical, 12)
-                    .background(Color.white)
+                    .background(Theme.background)
             }
         }
-        .background(Color.white.ignoresSafeArea())
+        .background(Theme.background.ignoresSafeArea())
         .animation(.easeInOut(duration: 0.3), value: step)
         .animation(.easeInOut(duration: 0.3), value: searchPhase)
     }
@@ -162,7 +162,7 @@ struct PairingFlowView: View {
     private func title(_ text: String, _ subtitle: String) -> some View {
         VStack(alignment: .leading, spacing: 8) {
             Text(text)
-                .font(.largeTitle.weight(.bold))
+                .font(.largeTitle.weight(.semibold))
                 .foregroundStyle(Theme.ink)
                 .accessibilityAddTraits(.isHeader)
             Text(subtitle)
@@ -238,9 +238,9 @@ struct PairingFlowView: View {
                         .padding(.horizontal, 18)
                         .frame(minHeight: 60)
                         .background(RoundedRectangle(cornerRadius: Theme.cornerRadius, style: .continuous)
-                            .fill(selectedBrand == brand ? Theme.orange.opacity(0.1) : Theme.card))
+                            .fill(selectedBrand == brand ? Color(hex: 0xFDF1EB) : Theme.surface))
                         .overlay(RoundedRectangle(cornerRadius: Theme.cornerRadius, style: .continuous)
-                            .strokeBorder(selectedBrand == brand ? Theme.orange : .clear, lineWidth: 2))
+                            .strokeBorder(selectedBrand == brand ? Theme.orange.opacity(0.7) : .clear, lineWidth: 1.5))
                     }
                     .buttonStyle(.plain)
                     .accessibilityAddTraits(selectedBrand == brand ? .isSelected : [])
@@ -256,7 +256,7 @@ struct PairingFlowView: View {
                         .accessibilityHidden(true)
                     VStack(alignment: .leading, spacing: 4) {
                         Text("Use adapter \(brand.adapter)")
-                            .font(.title2.weight(.bold))
+                            .font(.title2.weight(.semibold))
                             .foregroundStyle(Theme.ink)
                         Text(brand.adapterNote)
                             .font(.body)
@@ -480,7 +480,7 @@ private struct PairingFailureView: View {
                 .padding(.vertical, 12)
                 .accessibilityHidden(true)
             Text("Let’s try that again")
-                .font(.largeTitle.weight(.bold))
+                .font(.largeTitle.weight(.semibold))
                 .accessibilityAddTraits(.isHeader)
             Text("We couldn’t connect to your ONDO this time. That’s common and nothing is broken.")
                 .font(.title3)

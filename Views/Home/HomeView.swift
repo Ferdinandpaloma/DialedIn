@@ -30,7 +30,7 @@ struct HomeView: View {
                 }
                 .padding(20)
             }
-            .background(Color.white)
+            .background(Theme.background)
             .toolbar(.hidden, for: .navigationBar)
             .navigationTitle("Home")
             .navigationDestination(for: HomeRoute.self) { _ in
@@ -72,7 +72,7 @@ struct HomeView: View {
                 }
                 .buttonStyle(.ondoPrimary(Theme.navy))
                 Button("Stop") { controller.stop() }
-                    .buttonStyle(.ondoSecondary(Theme.red))
+                    .buttonStyle(.ondoStop)
                     .frame(maxWidth: 130)
                     .accessibilityLabel("Stop shower")
             }
@@ -134,15 +134,13 @@ struct HomeView: View {
             .frame(minWidth: 44, minHeight: 44)
             .accessibilityLabel("Cancel scheduled warm-up")
         }
-        .ondoCard(Theme.orange.opacity(0.1))
-        .overlay(RoundedRectangle(cornerRadius: Theme.cornerRadius, style: .continuous)
-            .strokeBorder(Theme.orange.opacity(0.6), lineWidth: 2))
+        .ondoCard(Color(hex: 0xFDF1EB))
     }
 
     private var presets: some View {
         VStack(alignment: .leading, spacing: 12) {
             Text("Presets")
-                .font(.title2.weight(.bold))
+                .font(.title2.weight(.semibold))
                 .accessibilityAddTraits(.isHeader)
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 12) {
@@ -164,7 +162,7 @@ struct HomeView: View {
                             .foregroundStyle(Theme.navy)
                             .frame(minWidth: 110, minHeight: 96)
                             .background(RoundedRectangle(cornerRadius: Theme.cornerRadius, style: .continuous)
-                                .strokeBorder(Theme.hairline, style: StrokeStyle(lineWidth: 2, dash: [6, 5])))
+                                .strokeBorder(Theme.offGray.opacity(0.6), style: StrokeStyle(lineWidth: 1.5, dash: [6, 5])))
                     }
                     .buttonStyle(.plain)
                     .accessibilityLabel("Add preset")

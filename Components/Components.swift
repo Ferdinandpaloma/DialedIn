@@ -3,17 +3,18 @@ import SwiftUI
 // MARK: - Card
 
 private struct CardModifier: ViewModifier {
-    var fill: Color = Theme.card
+    var fill: Color = Theme.surface
     func body(content: Content) -> some View {
         content
             .padding(18)
             .frame(maxWidth: .infinity, alignment: .leading)
             .background(RoundedRectangle(cornerRadius: Theme.cornerRadius, style: .continuous).fill(fill))
+            .shadow(color: Theme.shadow, radius: 12, y: 4)
     }
 }
 
 extension View {
-    func ondoCard(_ fill: Color = Theme.card) -> some View { modifier(CardModifier(fill: fill)) }
+    func ondoCard(_ fill: Color = Theme.surface) -> some View { modifier(CardModifier(fill: fill)) }
 }
 
 // MARK: - Logo (long-press opens the hidden debug menu)
@@ -27,8 +28,8 @@ struct OndoLogo: View {
         HStack(spacing: 10) {
             DialGlyph().frame(width: 36, height: 36)
             Text("ONDO")
-                .font(.title2.weight(.heavy))
-                .tracking(5)
+                .font(.title2.weight(.bold))
+                .tracking(4)
                 .foregroundStyle(onDark ? .white : Theme.navy)
         }
         .frame(minHeight: 44)
@@ -85,9 +86,7 @@ struct ReadyBanner: View {
         }
         .padding(18)
         .background(RoundedRectangle(cornerRadius: Theme.cornerRadius, style: .continuous).fill(Theme.navy))
-        .overlay(RoundedRectangle(cornerRadius: Theme.cornerRadius, style: .continuous)
-            .strokeBorder(Theme.green, lineWidth: 3))
-        .shadow(color: .black.opacity(0.25), radius: 16, y: 8)
+        .shadow(color: Theme.navy.opacity(0.18), radius: 16, y: 6)
         .padding(.horizontal, 16)
         .accessibilityElement(children: .combine)
     }
@@ -150,8 +149,8 @@ struct RoundIconButton: View {
                 .font(.system(size: 30, weight: .bold))
                 .foregroundStyle(Theme.navy)
                 .frame(width: 76, height: 76)
-                .background(Circle().fill(Theme.card))
-                .overlay(Circle().strokeBorder(Theme.hairline, lineWidth: 2))
+                .background(Circle().fill(Theme.surface))
+                .shadow(color: Theme.shadow, radius: 10, y: 3)
         }
         .buttonStyle(.plain)
         .accessibilityLabel(label)
@@ -174,15 +173,17 @@ struct PresetChip: View {
                     .lineLimit(1)
             }
             Text(units.string(preset.temperature))
-                .font(.title.weight(.bold))
+                .font(.title.weight(.semibold))
                 .foregroundStyle(Theme.ink)
         }
         .padding(18)
         .frame(minWidth: 160, minHeight: 96, alignment: .leading)
         .background(RoundedRectangle(cornerRadius: Theme.cornerRadius, style: .continuous)
-            .fill(preset.color.color.opacity(0.12)))
-        .overlay(RoundedRectangle(cornerRadius: Theme.cornerRadius, style: .continuous)
-            .strokeBorder(preset.color.color.opacity(0.6), lineWidth: 2))
+            .fill(Theme.surface))
+        .overlay(alignment: .leading) {
+            Capsule().fill(preset.color.color).frame(width: 5).padding(.vertical, 18)
+        }
+        .shadow(color: Theme.shadow, radius: 12, y: 4)
         .accessibilityElement(children: .ignore)
         .accessibilityLabel("\(preset.name) preset, \(units.spoken(preset.temperature))")
     }

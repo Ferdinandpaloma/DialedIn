@@ -28,6 +28,12 @@ enum Theme {
     static let secondaryInk = Color(hex: 0x4A5560)   // ≥ 7:1 on white and on `card`
     static let hairline = Color(hex: 0xD9E0E6)
     static let offGray = Color(hex: 0xA9B4BE)        // "OFF" label on the dark dial face
+    static let redDeep = Color(hex: 0xB3302E)        // red text on light tints (≥ 5:1)
+
+    /// Calm surfaces: soft gray page, white cards with a faint shadow.
+    static let background = card
+    static let surface = Color.white
+    static let shadow = navy.opacity(0.07)
 
     static let cornerRadius: CGFloat = 20
     static let spacing: CGFloat = 20
